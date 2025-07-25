@@ -1,4 +1,5 @@
 import { Mastra } from "@mastra/core/mastra";
+import { VercelDeployer } from "@mastra/deployer-vercel";
 import { LibSQLStore } from "@mastra/libsql";
 import { PinoLogger } from "@mastra/loggers";
 import { chefAgent } from "./agents/chef-agent";
@@ -16,4 +17,5 @@ export const mastra = new Mastra({
 		name: "Mastra",
 		level: "info",
 	}),
+	deployer: new VercelDeployer(),
 });
